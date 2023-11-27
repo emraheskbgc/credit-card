@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="card front-face">
+          <header>
+            <span class="logo">
+              <img src="/troy.png" alt="" />
+            </span>
+            <img src="/tem.png" class="chip" alt="" />
+          </header>
+          <div class="card-details">
+            <div class="name-number">
+              <h6>Kart Numarası</h6>
+              <h5 class="number" id="number"></h5>
+              <br />
+              <h6>Ad-Soyad</h6>
+              <h5 class="name" id="name"></h5>
+            </div>
+            <div class="valid-date">
+              <h6>SKT</h6>
+
+              <div class="inline">
+                <h4 id="month"></h4>
+                /
+                <h4 id="year"></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card back-face">
+          <h6>müşteri iletişim merkezi emraheskibagci595@gmail.com</h6>
+          <span class="magnetic-strip"></span>
+          <div class="signature"><span class="sig-num" id="cvc"></span></div>
+          <h5>
+            Emrah's card
+            <br />
+            The card is for practical purposes only
+            <br />
+            emraheskbgc
+          </h5>
+        </div>
+      </div>
+      <div class="right">
+        <div class="nameInput">
+          <label> Kart Üzerindeki isim</label><br />
+          <input
+            type="text"
+            name=""
+            id="nameInput"
+            oninput="printLetterName()"
+          />
+        </div>
+        <div class="cardNumber">
+          <label> Kart Numarası</label><br />
+          <input
+            type="text"
+            name=""
+            id="creditCardNumber"
+            oninput="updateCreditCardNumber()"
+            maxlength="16"
+            placeholder="XXXX-XXXX-XXXX-XXXX"
+          />
+        </div>
+        <div class="skt">
+          <label>SKT</label><br />
+          <input
+            type="text"
+            name=""
+            id="sktm"
+            maxlength="2"
+            oninput="printLetterMonth()"
+          />
+          /
+          <input
+            type="text"
+            name=""
+            id="skty"
+            maxlength="2"
+            oninput="printLetterYear()"
+          />
+        </div>
+        <div class="cvc">
+          <label>CVC</label><br />
+          <input
+            type="text"
+            name=""
+            maxlength="3"
+            id="cvcInput"
+            oninput="printLetterCvc()"
+          />
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
